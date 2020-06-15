@@ -1,0 +1,53 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+<!-- 동환 -->
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/samples.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <div class="row">
+        <nav id="sidebarMenu" class="col-sm-3 col-md-3 col-lg-2 d-block bg-light sidebar collapse">
+            <div class="sidebar-sticky pt-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'samples' %}">
+                            BROWSE
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'sample_like' %}">
+                            LIKES
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'sample_download' %}">
+                            MY DOWNLOAD
+                        </a>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="col-3"></div>
+        <div class="col-4" id="no-downloads">
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1>NO DOWNLOADS</h1>
+                    <p class="lead text-muted"></p>
+                    <p>
+                        <a href="{% url 'samples' %}" class="btn btn-warning my-2">LOOK AROUND SAMPLES</a>
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+
+</body>
+
+{% endblock %}

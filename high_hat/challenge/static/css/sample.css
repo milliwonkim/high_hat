@@ -1,0 +1,21 @@
+.left-box {
+    background-image: url('img/samplebg.png');
+    float: left;
+    width: 40%;
+  }
+  .right-box {
+    background-image: url('img/samplebg.png');
+    float: right;
+    width: 60%;
+  }
+p{
+    font-family: 'Francois One', sans-serif;
+    font-size: 50px;
+}
+
+  .box {
+    width: 700px;
+    height: 800px;
+    border: 3px solid #e1b12c;
+    border-radius: 10px;
+ }

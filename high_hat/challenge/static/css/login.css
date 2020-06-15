@@ -1,0 +1,14 @@
+h1,
+h6,
+button {
+    font-family: 'Francois One', sans-serif;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 53.8vh;
+    margin: 100px auto;
+}

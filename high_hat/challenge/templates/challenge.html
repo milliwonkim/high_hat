@@ -1,0 +1,287 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/challenge1.css' %}" />
+{% endblock %}
+
+{% block content %}
+<!-- ------- -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+        <div class="row">
+            <div class="col-sm">
+                <div class="row">
+                    <div class="col-sm challenge-text">
+                        <h6 style="color: gray;">{{challenges2.usages}}</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                    <h1>{{challenges2.title}}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <h6 style="color: gray;">BY {{challenges2.writer}}</h6>
+                    </div>
+                    <div class="col-sm">
+                        <h6 style="color: gray;">{{challenges2.pub_date}}</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm challenge-content">
+                        <pre class="real-challenge-content">
+{{challenges2.body}}
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row information-outer">
+            <div class="col-sm">
+                <div class="row">
+                    <div class="col-sm information">
+                        <h6 style="color: gray;">REWARDS</h6>
+                        </div>
+                        <div class="col-sm">
+                            <div class="row">
+                                <div class="col-sm information-content">
+                                    ${{challenges2.reward}}
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm information">
+                        <h6 style="color: gray;">TYPES</h6>
+                    </div>
+                    <div class="col-sm">
+                        <div class="row">
+                            <div class="col-sm information-content">
+                                {{challenges2.types}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm information">
+                        <h6 style="color: gray;">USAGES</h6>
+                    </div>
+                    <div class="col-sm">
+                        <div class="row">
+                            <div class="col-sm information-content">
+                                {{challenges2.usages}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="col-sm">
+        <div class="row">
+            <div class="col-sm">
+                <hr />
+                <h6 style="color: gray;">CHALLENGES & VOTES</h6>
+                <a href="{% url 'add-challenge' %}">
+                    <button
+                        class="btn btn-primary"
+                        style="color: white; text-decoration: none; margin: 10px 0 20px 0;"
+                    >
+                        CHALLENGE!!
+                    </button>
+                </a>
+            </div>
+            <br/>
+            <div class="row">
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm vote-content">
+                  {% for getadd in getAddChallenges.all %}
+                    <div class="row">
+                        <div class="col-sm">
+                            <h6 style="color: gray;">#1</h6>
+                            <p>{{getadd.writer}}</p>
+                        </div>
+                        <div class="col-sm player">
+                            {{getadd.music}}
+                        </div>
+                    </div>
+                  {% endfor %}
+                <div class="row">
+                    <div class="col-sm">
+                        <h6 style="color: gray;">#1</h6>
+                        <p>MILLIWONKIM</p>
+                    </div>
+                    <div class="col-sm player">
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/650082653&color=e1b12c"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/kk7nqjcynmvi" title="MilliwonBeatz" target="_blank" style="color: #cccccc; text-decoration: none;">MilliwonBeatz</a> · <a href="https://soundcloud.com/kk7nqjcynmvi/freelil-nas-x-fetty-wap-panini-trap-queen-type-beat" title="[FREE]Lil Nas X Fetty Wap  Panini, Trap Queen Type Beat" target="_blank" style="color: #cccccc; text-decoration: none;">[FREE]Lil Nas X Fetty Wap  Panini, Trap Queen Type Beat</a></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <h6 style="color: gray;">#2</h6>
+                        <p>Svloureiro</p>
+                    </div>
+                    <div class="col-sm player">
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/227796494&color=%23e1b12c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/svloureiro" title="svloureiro_" target="_blank" style="color: #cccccc; text-decoration: none;">svloureiro_</a> · <a href="https://soundcloud.com/svloureiro/nothing-hip-hop-old-school-rap-beats-freestyle-instrumental-thaibeats" title="Nothing - Hip Hop Old School Rap Beats Freestyle Instrumental (THAIBEATS)" target="_blank" style="color: #cccccc; text-decoration: none;">Nothing - Hip Hop Old School Rap Beats Freestyle Instrumental (THAIBEATS)</a></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <h6 style="color: gray;">#3</h6>
+                        <p>THAIBEATS</p>
+                    </div>
+                    <div class="col-sm player">
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/422972397&color=%23e1b12c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/thaibeats1" title="THAIBEATS" target="_blank" style="color: #cccccc; text-decoration: none;">THAIBEATS</a> · <a href="https://soundcloud.com/thaibeats1/dpr-live-x-groovyroom-x-sik-k-type-beat-flower" title="DPR Live x GroovyRoom x Sik-K Type Beat  &quot;Flower&quot;" target="_blank" style="color: #cccccc; text-decoration: none;">DPR Live x GroovyRoom x Sik-K Type Beat  &quot;Flower&quot;</a></div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row more-songs">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">MORE CHALLENGES & VOTES</button>
+
+                    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-sm vote-content">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <h6 style="color: gray;">#1</h6>
+                                            <p>MILLIWONKIM</p>
+                                        </div>
+                                        <div class="col-sm player">
+                                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/650082653&color=e1b12c"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/kk7nqjcynmvi" title="MilliwonBeatz" target="_blank" style="color: #cccccc; text-decoration: none;">MilliwonBeatz</a> · <a href="https://soundcloud.com/kk7nqjcynmvi/freelil-nas-x-fetty-wap-panini-trap-queen-type-beat" title="[FREE]Lil Nas X Fetty Wap  Panini, Trap Queen Type Beat" target="_blank" style="color: #cccccc; text-decoration: none;">[FREE]Lil Nas X Fetty Wap  Panini, Trap Queen Type Beat</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <h6 style="color: gray;">#2</h6>
+                                            <p>Svloureiro</p>
+                                        </div>
+                                        <div class="col-sm player">
+                                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/227796494&color=%23e1b12c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/svloureiro" title="svloureiro_" target="_blank" style="color: #cccccc; text-decoration: none;">svloureiro_</a> · <a href="https://soundcloud.com/svloureiro/nothing-hip-hop-old-school-rap-beats-freestyle-instrumental-thaibeats" title="Nothing - Hip Hop Old School Rap Beats Freestyle Instrumental (THAIBEATS)" target="_blank" style="color: #cccccc; text-decoration: none;">Nothing - Hip Hop Old School Rap Beats Freestyle Instrumental (THAIBEATS)</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <h6 style="color: gray;">#3</h6>
+                                            <p>THAIBEATS</p>
+                                        </div>
+                                        <div class="col-sm player">
+                                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/422972397&color=%23e1b12c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/thaibeats1" title="THAIBEATS" target="_blank" style="color: #cccccc; text-decoration: none;">THAIBEATS</a> · <a href="https://soundcloud.com/thaibeats1/dpr-live-x-groovyroom-x-sik-k-type-beat-flower" title="DPR Live x GroovyRoom x Sik-K Type Beat  &quot;Flower&quot;" target="_blank" style="color: #cccccc; text-decoration: none;">DPR Live x GroovyRoom x Sik-K Type Beat  &quot;Flower&quot;</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <h3>#4</h3>
+                                            <p>SCARRYP</p>
+                                        </div>
+                                        <div class="col-sm player">
+                                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/322713923&color=%23e1b12c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/thaibeats1" title="THAIBEATS" target="_blank" style="color: #cccccc; text-decoration: none;">THAIBEATS</a> · <a href="https://soundcloud.com/thaibeats1/deja-vu-post-malone-type-rb-soul-beat-instrumental" title="Deja Vu - Post Malone Type R&amp;B Soul Beat Instrumental" target="_blank" style="color: #cccccc; text-decoration: none;">Deja Vu - Post Malone Type R&amp;B Soul Beat Instrumental</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <h3>#5</h3>
+                                            <p>The Weeknd</p>
+                                        </div>
+                                        <div class="col-sm player">
+                                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/824941681&color=e1b12c"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/theweeknd" title="The Weeknd" target="_blank" style="color: #cccccc; text-decoration: none;">The Weeknd</a> · <a href="https://soundcloud.com/theweeknd/in-your-eyes-remix-feat-doja" title="In Your Eyes (Remix) [feat. Doja Cat]" target="_blank" style="color: #cccccc; text-decoration: none;">In Your Eyes (Remix) [feat. Doja Cat]</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <h3>#6</h3>
+                                            <p>Lianne La Havas</p>
+                                        </div>
+                                        <div class="col-sm player">
+                                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/774420880&color=%23e1b12c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/liannelahavas" title="Lianne La Havas" target="_blank" style="color: #cccccc; text-decoration: none;">Lianne La Havas</a> · <a href="https://soundcloud.com/liannelahavas/paper-thin" title="Paper Thin" target="_blank" style="color: #cccccc; text-decoration: none;">Paper Thin</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <h3>#7</h3>
+                                            <p>A-Trak</p>
+                                        </div>
+                                        <div class="col-sm player">
+                                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/804049603&color=%23e1b12c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/a-trak" title="A-Trak" target="_blank" style="color: #cccccc; text-decoration: none;">A-Trak</a> · <a href="https://soundcloud.com/a-trak/original-samples-mix-for-radio-nova-2020" title="Original Samples mix for Radio Nova 2020" target="_blank" style="color: #cccccc; text-decoration: none;">Original Samples mix for Radio Nova 2020</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <h3>#8</h3>
+                                            <p>Omarion</p>
+                                        </div>
+                                        <div class="col-sm player">
+                                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/760398718&color=%23e1b12c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/omarion" title="Omarion" target="_blank" style="color: #cccccc; text-decoration: none;">Omarion</a> · <a href="https://soundcloud.com/omarion/can-you-hear-me-feat-t-pain" title="Can You Hear Me? (feat. T-Pain)" target="_blank" style="color: #cccccc; text-decoration: none;">Can You Hear Me? (feat. T-Pain)</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <h3>#9</h3>
+                                            <p>AlunaGeorge</p>
+                                        </div>
+                                        <div class="col-sm player">
+                                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/736502449&color=%23e1b12c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/alunageorge" title="AlunaGeorge" target="_blank" style="color: #cccccc; text-decoration: none;">AlunaGeorge</a> · <a href="https://soundcloud.com/alunageorge/alunas-room-we-were-gonna-go-out-but-we-didnt-mix" title="Aluna&#x27;s Room - We Were Gonna Go Out, But We Didn&#x27;t Mix" target="_blank" style="color: #cccccc; text-decoration: none;">Aluna&#x27;s Room - We Were Gonna Go Out, But We Didn&#x27;t Mix</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <h3>#10</h3>
+                                            <p>Ayanis</p>
+                                        </div>
+                                        <div class="col-sm player">
+                                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/529309596&color=%23e1b12c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/itsayanis" title="Ayanis" target="_blank" style="color: #cccccc; text-decoration: none;">Ayanis</a> · <a href="https://soundcloud.com/itsayanis/wait-a-minute" title="Wait A Minute" target="_blank" style="color: #cccccc; text-decoration: none;">Wait A Minute</a></div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                          <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                              <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                          </li>
+                                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                          <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                              <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </nav>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- <a href="{% url 'moreSong' %}">MORE SONGS</a> -->
+                </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+{% endblock %}

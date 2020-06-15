@@ -1,0 +1,16 @@
+.add-challenge-form {
+    width: 100vw;
+    height: 77.2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
+    width: 600px;
+}
+
+.btn {
+    background-color: #e1b12c !important;
+    border: none !important;
+}

@@ -1,0 +1,68 @@
+/* body {
+    padding: 0;
+    margin: 0;
+} */
+
+.vote-content {
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.btn {
+    background-color: #e1b12c !important;
+    border: none !important;
+}
+
+.challenge-text {
+    margin: 20px 0;
+}
+
+.player {
+    margin: 0 10px 0 0;
+}
+
+.modal {
+    width: 100vw;
+}
+
+.more-songs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px 10px 10px;
+}
+
+.real-challenge-content {
+    overflow: auto;
+    text-align: center;
+    font-family: 'Francois One', sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+    margin: 10px 10px 0 0;
+    height: 80%;
+    width: 600px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .real-challenge-content {
+        width: 100%;
+    }
+}
+
+/* .information-content {
+    
+    border: 3px solid gray;
+    margin: 5px;
+    box-shadow: 3px 3px 3px black;
+} */

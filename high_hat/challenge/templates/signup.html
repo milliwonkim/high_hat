@@ -1,0 +1,32 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="container signup-form">
+  <div class="row">
+    <div class="col-sm">
+      <U><h1>SIGN UP</h1></U>
+      <form method="POST" action="{%url 'signup'%}">
+        {% csrf_token %}
+      <div class="form-group">
+        <h6>ID</h6>
+        <input type="text" style="width:350px; height:40px;" class="form-control" name="username">
+      </div>
+      <div class="form-group">
+        <h6>PASSWORD</h6>
+        <input type="password" style="width:350px; height:40px;" class="form-control" name="password1">
+      </div>
+      <div class="form-group">
+        <h6>CONFIRM PASSWORD</h6>
+        <input type="password" style="width:350px; height:40px;" class="form-control" name="password2">
+      </div>
+      <button type="submit" style="width:350px; height:40px;" class="btn btn-warning">Submit</button>
+    </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

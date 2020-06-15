@@ -1,0 +1,15 @@
+.navbar {
+    background-color: #e1b12c !important;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.navbar-brand {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+}
+
+.nav-item {
+    font-family: 'Francois One', sans-serif;
+    font-size: 20px;
+}

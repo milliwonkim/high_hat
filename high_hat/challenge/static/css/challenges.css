@@ -1,0 +1,36 @@
+h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+    margin: 10px;
+    font-family: 'Francois One', sans-serif;
+}
+
+.button {
+    margin: 20px;
+}
+
+.hot-challenges-title {
+    background-color: #fbc531;
+    color: white;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.pick-filter {
+    margin: 20px;
+}
+
+#todays-hot-challenges {
+    height: 80vh;
+    overflow: scroll;
+}
+
+#challenges-from-high-hat {
+    height: 700px;
+    overflow: scroll;
+}
