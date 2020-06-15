@@ -2,6 +2,12 @@
  * Sidebar
  */
 
+.samples-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
  #sidebarMenu {
     width: 220px;
   }
@@ -87,7 +93,7 @@
 
 #no-likes {
   display: flex;
-  align-items: center;;
+  justify-content: center;
 }
 
 #no-downloads {

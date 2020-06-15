@@ -7,42 +7,44 @@
 
 {% block content %}
 <br />
-<div class="container">
-    <form action="{% url 'create' %}">
-        <div class="form-group">
-          <label for="inputAddress">Writer</label>
-          <input type="text" class="form-control" width="700" id="inputAddress" placeholder="What Music Do You Wanna Get?" name="writer">
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Title</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="What Music Do You Wanna Get?" name="title">
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Contents</label>
-          <textarea class="form-control" id="inputAddress" placeholder="Tell Us More" name="body"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Reward</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="How Much Do You Pay For It?" name="reward">
-        </div>
-            <div class="form-group col-md">
-              <label for="inputState">Types</label>
-              <select id="inputState" class="form-control" name="types">
-                <option>Drake</option>
-                <option>Migos</option>
-                <option>Justin Bieber</option>
-                <option>David Guetta</option>
-                <option>K-POP</option>
-              </select>
-            </div>
-            <div class="form-group col-md">
-              <label for="inputState">Usages</label>
-              <select id="inputState" class="form-control" name="usages">
-                <option>For Creators</option>
-                <option>For Composers</option>
-              </select>
-            </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-</div>
+<section class="jumbotron text-center">
+  <div class="container">
+      <form action="{% url 'create' %}">
+          <div class="form-group">
+            <label for="inputAddress">Writer</label>
+            <input type="text" class="form-control" width="700" id="inputAddress" placeholder="What Music Do You Wanna Get?" name="writer">
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Title</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="What Music Do You Wanna Get?" name="title">
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Contents</label>
+            <textarea class="form-control" id="inputAddress" placeholder="Tell Us More" name="body"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Reward</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="How Much Do You Pay For It?" name="reward">
+          </div>
+              <div class="form-group col-md">
+                <label for="inputState">Types</label>
+                <select id="inputState" class="form-control" name="types">
+                  <option>Drake</option>
+                  <option>Migos</option>
+                  <option>Justin Bieber</option>
+                  <option>David Guetta</option>
+                  <option>K-POP</option>
+                </select>
+              </div>
+              <div class="form-group col-md">
+                <label for="inputState">Usages</label>
+                <select id="inputState" class="form-control" name="usages">
+                  <option>For Creators</option>
+                  <option>For Composers</option>
+                </select>
+              </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+  </div>
+</section>
 {% endblock %}
